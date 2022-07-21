@@ -1,0 +1,73 @@
+{{ 'component-single-block.css' | asset_url | stylesheet_tag }} 
+<div class="wrapper">
+{% for block in section.blocks %} 
+{% case block.type %}
+    {% when 'image_picker' %}
+        <img class='icon' src="{{block.settings.icon | img_url: '72x58', crop: 'center'}}" alt="">
+    {% when 'text' %}
+        <p class='SD_Title'>{{block.settings.title}}</p>
+{% endcase %}
+{% endfor %}
+    <a href="{{section.settings.URL}}">
+        <img class='SD_image'src="{{section.settings.image | img_url:'980x438'}}" alt="">
+    </a>
+    <a href="{{section.settings.URL}}">
+        <button>{{section.settings.button}}</button>
+    </a>
+</div>
+
+
+{% schema %}
+{
+  "name": "Single Block",
+  "blocks": [
+    {
+        "type": "image_picker",
+        "name": "Icon Picker",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "icon",
+                "label": "Icon"
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "name": "Title",
+        "settings": [
+            {
+                "type":"text",
+                "id":"title",
+                "label":"Title of your block",
+                "default": "Lorem Ipsum SD"
+            }
+        ]
+    }
+  ],
+  "settings": [
+    {
+        "type": "image_picker",
+        "id": "image",
+        "label": "image picker"
+    },
+    {
+        "type": "text",
+        "id": "button",
+        "label": "Button"
+    },
+    {
+        "type": "url",
+        "id": "URL",
+        "label": "Image Url",
+        "info": "Link to the product page"
+    }
+  ],
+  "presets": [
+    {
+        "name": "Single Block",
+        "category": "SD Assignments"
+    }
+    ]
+}
+{% endschema %}

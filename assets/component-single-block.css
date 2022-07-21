@@ -1,0 +1,54 @@
+.icon{
+    display:block;
+    margin: 0 auto;
+    border: rgb(68,54,85) solid;
+    width: 7%;
+}
+.SD_image{
+    display:block;
+    margin: 0 auto;
+    width: 85%;
+}
+.SD_Title{
+    color: #434343;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top:0;
+    margin-bottom:2rem;
+    text-transform: uppercase;
+}
+.wrapper {
+    /* border:solid black; */
+    text-align:center;
+}
+button {
+    color: rgb(68,54,85);
+    font-weight: 500;
+    letter-spacing: .2rem;
+    background-color: transparent;
+    border: rgb(68,54,85) solid;
+    margin: 2rem 0;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 750px) {
+    .wrapper{
+        /* background-color: blue; */
+    }
+    .SD_Title {
+        font-size:1.75rem;
+    }
+    .icon {
+        width: 15%;
+    }
+    .SD_image {
+        width: 245px;
+        height: 289px;
+        object-fit: cover;
+        object-position: center;
+    }
+    a > button { 
+        width: 245px;
+    }
+}
