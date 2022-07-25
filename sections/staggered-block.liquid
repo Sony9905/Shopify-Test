@@ -1,0 +1,139 @@
+{{ 'component-staggered-block.css' | asset_url | stylesheet_tag }} 
+<div class='staggered-container'>
+    <div class='card-wrapper main-carousel' data-flickity='{ "wrapAround": true, "prevNextButtons": true, "watchCSS": true }' >
+        <div class='card-1 carousel-cell'>
+            <div class='img-container'>
+                <img class='card1 ' src="{{section.settings.card1 | img_url: '300x360', crop: 'center'}}" alt="">
+            </div>
+            <div class='text-bubble'>
+                <h2 class='card1-text'>{{section.settings.card1-text}}</h2>
+                <p class='card1-subtext'>{{section.settings.card1-subtext}}</p>
+                <a class='card1-a' href="{{section.settings.a1}}">
+                    <p>{{section.settings.p1}}</p>
+                </a>
+            </div>
+        </div>
+        <div class='card-2 carousel-cell'>
+            <img class='card2 ' src="{{section.settings.card2 | img_url: '300x360', crop: 'center'}}" alt="">
+            <div class='text-bubble'>
+                <h2 class='card2-text'>{{section.settings.card2-text}}</h2>
+                <p class='card2-subtext'>{{section.settings.card2-subtext}}</p>
+                <a class='card2-a' href="{{section.settings.a2}}">
+                    <p>{{section.settings.p2}}</p>
+                </a>
+            </div>
+        </div>
+        <div class='card-3 carousel-cell'>
+            <img class='card3 ' src="{{section.settings.card3 | img_url: '300x360', crop: 'center'}}" alt="">
+            <div class='text-bubble'>
+                <h2 class='card3-text'>{{section.settings.card3-text}}</h2>
+                <p class='card3-subtext'>{{section.settings.card3-subtext}}</p>
+                <a class='card3-a' href="{{section.settings.a3}}">
+                    <p>{{section.settings.p3}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Staggered Block",
+        "class": "Staggered_Block",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "card1",
+                "label": "Card 1"
+            },
+            {
+                "type": "text",
+                "id": "card1-text",
+                "label": "Card 1 Text",
+                "default": "Lorem Ipsum"
+            },
+            {
+                "type": "text",
+                "id": "card1-subtext",
+                "label": "Card 1 Sub-Text",
+                "default": "Lorem Ipsum"
+            },
+            {
+                "type": "text",
+                "id": "p1",
+                "label": "Card 1 Link Name",
+                "default": "Lorem Ipsum"
+            },
+            {
+                "type": "url",
+                "id": "link1",
+                "label": "Link 1",
+                "info": "Link to Product"
+            },
+            {
+                "type": "image_picker",
+                "id": "card2",
+                "label": "Card 2"
+            },
+            {
+                "type": "text",
+                "id": "card2-text",
+                "label": "Card 2 Text",
+                "default": "Lorem Ipsum"
+            },
+            {
+                "type": "text",
+                "id": "card2-subtext",
+                "label": "Card 2 Sub-Text",
+                "default": "Lorem Ipsum"
+            },
+            {
+                "type": "text",
+                "id": "p2",
+                "label": "Card 1 Link Name",
+                "default": "Lorem Ipsum"
+            },
+            {
+                "type": "url",
+                "id": "link2",
+                "label": "Link 2",
+                "info": "Link to Product"
+            },
+            {
+                "type": "image_picker",
+                "id": "card3",
+                "label": "Card 3"
+            },
+            {
+                "type": "text",
+                "id": "card3-text",
+                "label": "Card 3 Text",
+                "default": "Lorem Ipsum"
+            },
+            {
+                "type": "text",
+                "id": "card3-subtext",
+                "label": "Card 3 Sub-Text",
+                "default": "Lorem Ipsum"
+            },
+            {
+                "type": "text",
+                "id": "p3",
+                "label": "Card 1 Link Name",
+                "default": "Lorem Ipsum"
+            },
+            {
+                "type": "url",
+                "id": "link3",
+                "label": "Link 3",
+                "info": "Link to Product"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Staggered Block",
+                "category": "SD Assignments"
+            }
+            ]
+    }
+{% endschema %}

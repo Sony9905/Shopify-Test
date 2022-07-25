@@ -1,0 +1,172 @@
+.staggered-container {
+    background: none;
+    /* background-color: transparent; */
+}
+
+.card1 {
+    height:300px;
+    width:100%;
+}
+
+.card2 {
+    height:300px;
+    width:100% ;
+}
+.card3 {
+    height:300px;
+    width:100% ;
+}
+.text-bubble {
+    margin-left: 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    text-transform: none;
+    margin-top: 0;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    text-transform: none;
+}
+.main-carousel::after {
+    content: 'flickity';
+    display: none;
+  }
+/* .staggered-container {
+    background: linear-gradient(black 50%, rgb(232, 232, 234))
+}
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.card-1 {
+    margin: 0 auto;
+    height: min-content;
+    background-color: white;
+}
+
+.card-2 {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+    height: min-content;
+    background-color: white;
+}
+
+.card-3 {
+    margin: 0 auto;
+    height: min-content;
+    background-color: white;
+}
+
+.text-bubble {
+    margin-left: 25px;
+}
+
+.card1-text {
+    font-weight: bold;
+    margin:0;
+}
+.card1-subtext {
+    margin:0;
+}
+
+.card2-text {
+    font-weight: bold;
+    margin:0;
+}
+.card2-subtext {
+    margin:0;
+}
+.card3-text {
+    font-weight: bold;
+    margin:0;
+}
+.card3-subtext {
+    margin:0;
+}
+.card1 {
+    min-width: 300px;
+    max-width: 400px;
+    height: 360px;
+    max-height: 460px;
+}
+
+.main-carousel:after {
+    content: '';
+} */
+@media screen and (min-width: 750px) {
+    .staggered-container {
+        background: linear-gradient(black 50%, rgb(232, 232, 234))
+    }
+    .main-carousel::after {
+        content: '';
+        display: none; /* hide :after */
+      }
+    .card-wrapper {
+        display: flex;
+        justify-content: center;
+        border: 1px solid black;
+        padding: 10px;
+    }
+    
+    .card-1 {
+        margin: 0 auto;
+        height: min-content;
+        background-color: white;
+    }
+    
+    .card-2 {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 50px;
+        height: min-content;
+        background-color: white;
+    }
+    
+    .card-3 {
+        margin: 0 auto;
+        height: min-content;
+        background-color: white;
+    }
+    
+    .text-bubble {
+        margin-left: 25px;
+    }
+    
+    .card1-text {
+        font-weight: bold;
+        margin:0;
+    }
+    .card1-subtext {
+        margin:0;
+    }
+    
+    .card2-text {
+        font-weight: bold;
+        margin:0;
+    }
+    .card2-subtext {
+        margin:0;
+    }
+    .card3-text {
+        font-weight: bold;
+        margin:0;
+    }
+    .card3-subtext {
+        margin:0;
+    }
+    .card1 {
+        min-width: 300px;
+        max-width: 400px;
+        height: 360px;
+        max-height: 460px;
+    }
+}

@@ -1,0 +1,9 @@
+{%for block in section.blocks%}
+    <div class='faq-text'>
+        {% case block.type%}
+        {%when 'Question'%}
+            <h2 style= "color:{{block.settings.textColor}};">{{block.settings.Question}}</h2>
+            <p style= "color:{{block.settings.textColor}};">{{block.settings.Answer}}</p>
+        {%endcase%}
+    {%endfor%}
+  </div>
